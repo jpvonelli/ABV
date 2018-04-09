@@ -9,4 +9,5 @@ class InventoryQueries:
         self.inventory = inventory
 
     def get_available_inventory(self):
-        return [make_subset(item) for item in self.inventory.get_historic_inventory() if item['quantity'] > 0]
+        historic_inventory = self.inventory.get_historic_inventory()
+        return [make_subset(item) for item in historic_inventory if item['quantity'] > 0]
