@@ -1,5 +1,4 @@
 class Beer:
-
     # pylint: disable=too-many-arguments
     def __init__(self, name, size, style, price, quantity):
         self.name = name
@@ -24,6 +23,6 @@ class Beer:
         return self.quantity
 
     def is_available(self):
-        if int(self.get_quantity()) > 0:
+        if float(self.get_quantity()) > 0.0:
             return True
         return False

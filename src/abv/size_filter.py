@@ -1,11 +1,11 @@
-class NameFilter:
+class SizeFilter:
 
-    def __init__(self, subfilter, name):
+    def __init__(self, subfilter, size):
         self.subfilter = subfilter
-        self.name = name
+        self.size = size
 
 
     def is_match(self, beer):
-        if beer.name != self.name:
+        if beer.size != self.size:
             return False
         return self.subfilter.is_match(beer)
