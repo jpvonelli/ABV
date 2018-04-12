@@ -7,7 +7,6 @@ class Beer:
         self.price = price
         self.quantity = quantity
 
-
     def is_available(self):
         if float(self.quantity) > 0.0:
             return True
